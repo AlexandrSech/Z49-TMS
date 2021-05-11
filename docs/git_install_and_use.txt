@@ -10,6 +10,3 @@ sudo brew install git
 
 Using GIT
 
-
-11111
-

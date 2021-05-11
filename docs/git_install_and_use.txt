@@ -1,0 +1,13 @@
+Install GIT
+
+Linux:
+sudo apt install git
+
+MacOs:
+sudo brew install git
+(*если brew не установлен - загуглите как и установите)
+
+
+Using GIT
+
+

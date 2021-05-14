@@ -30,3 +30,10 @@ git push
 8.Когда пул-реквест влили, вы локально переключаетесь в master и забираете все изменения
 git checkout master
 git pull
+
+
+
+
+
+123
+lalala

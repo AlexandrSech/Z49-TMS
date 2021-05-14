@@ -1,0 +1,6 @@
+"""
+Создать строку равную предпоследнему символу введенной строки.
+"""
+my_string = input("Введите строку: ")
+string_result = my_string[-2]
+print(string_result)

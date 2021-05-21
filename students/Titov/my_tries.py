@@ -60,3 +60,4 @@ def fact_1():
     for i in range(1, 10):
         k *= i
     return k
+

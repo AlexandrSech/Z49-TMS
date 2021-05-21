@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="479e80ef-b2e8-41ab-b3ce-109d9ccae74b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/course_6.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_5_10.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_5_10.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/course_4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_tries.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_tries.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +41,7 @@
     <setting file="file://$PROJECT_DIR$/task_5_9.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/task_5_10.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/course_6.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/my_tries.py" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1sWLaGGeqJZmoG2MpMXR5xGgbX0" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -57,7 +58,28 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/my_tries.py" />
   </component>
-  <component name="RunManager" selected="Python.my_tries">
+  <component name="RunManager" selected="Python.course_4">
+    <configuration name="course_4" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python3.8" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/course_4.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="course_6" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -142,27 +164,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="task_5_8" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="/usr/bin/python3.8" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/task_5_8.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="task_5_9" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -186,19 +187,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.courses" />
-      <item itemvalue="Python.task_5_8" />
       <item itemvalue="Python.task_5_9" />
       <item itemvalue="Python.course_6" />
       <item itemvalue="Python.task_5_10" />
       <item itemvalue="Python.my_tries" />
+      <item itemvalue="Python.course_4" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.course_4" />
         <item itemvalue="Python.my_tries" />
         <item itemvalue="Python.task_5_10" />
         <item itemvalue="Python.course_6" />
         <item itemvalue="Python.task_5_9" />
-        <item itemvalue="Python.task_5_8" />
       </list>
     </recent_temporary>
   </component>

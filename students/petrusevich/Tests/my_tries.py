@@ -1,6 +1,6 @@
 #import tester as t
 my_answers = {
-'name': '',
+'name': 'Petrusevich Galina',
 '1': 'cd',  # укажите команду в терминале для навигации по файловой системе
 '2': 'pwd',  # Укажите команду в терминале для того, чтобы узнать в какой директории сейчас вы находитесь
 '3': 'mkdir',  # Укажите команду в терминале для создания папки
@@ -48,9 +48,12 @@ fact = input('Введите факториал: ')
 fact = int(fact[:-1])
 fact1 = 1
 i = 1
-for i in range(1, (fact+1)):
-    fact1 *= i
-print(fact1)
+if fact == 0:
+    print(1)
+else:
+    for i in range(1, (fact+1)):
+        fact1 *= i
+    print(fact1)
 
 
 

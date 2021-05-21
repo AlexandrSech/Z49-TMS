@@ -64,3 +64,12 @@ while n > 1:
     n -= 1
 
 print(factorial)
+
+def fac(n):
+    if n == 0:
+        return 1
+    else:
+        return fac(n - 1) * n
+
+
+print(fac(4))

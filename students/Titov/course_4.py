@@ -1,3 +1,5 @@
+
+exit()
 import random
 spis = []
 m = 0

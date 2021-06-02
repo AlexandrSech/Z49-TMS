@@ -2,12 +2,18 @@
 равно сумме всех делителей другого, кроме самого этого числа. Найти все
 пары дружественных чисел, лежащих в диапазоне от 200 до 300.'''
 
-ch_1 = 0
-for i in range(200,301):
-    for el in range(1, i):
-        if i % 2 == 0:
-            ch_1 += i
-    
+
+for i in range(200,30001):
+    ch_1 = 0
+    ch_2 = 0
+    for el in range(1, i): #220
+        if i % el == 0:
+            ch_1 += el
+    for al in range(1, ch_1):
+        if ch_1 % al == 0:
+            ch_2 += al
+    if ch_1 != ch_2 and ch_2 == i and ch_2 < ch_1:
+        print(ch_2, ch_1)
 
 
 

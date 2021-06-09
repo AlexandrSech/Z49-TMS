@@ -23,6 +23,6 @@ for i in range(len(my_list) - 1):
             result[count] = temp
             temp = []
             count +=1
-        else:
-            continue
+    if i == len(my_list) -2 and len(temp) > 1:
+        result[count] = temp
 print(result)

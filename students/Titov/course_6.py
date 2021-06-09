@@ -1,7 +1,6 @@
-from datetime import datetime
-a = datetime.now()
-b = datetime(2015, 3, 21)
-c = a - b
-print(c.days)
-print(c.seconds)
-print(c.microseconds)
+slov = {1: 'asd', 2: 'sdf', 3: 321}
+print(slov.keys())
+for i in slov:
+    print(i, slov.get(i), ';;;;;;')
+for i, j in enumerate(slov):
+    print(i, j)

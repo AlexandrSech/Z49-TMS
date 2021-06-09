@@ -9,8 +9,6 @@ for i in range(n):
         l.append(random.randrange(a, b+1))
     print(matrix[i])
 
-
-
 max_el = 0
 min_el = b
 summ = 0
@@ -21,6 +19,10 @@ for item, value in enumerate(matrix):
         if j < min_el:
             min_el = j
         summ += j
+
 print('Максимальный элемент матрицы:', max_el)
 print('Минимальный элемент матрицы:', min_el)
 print('Сумма всех элементов:', summ)
+
+
+git commit -am пункт4

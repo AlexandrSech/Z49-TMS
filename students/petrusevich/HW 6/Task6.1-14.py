@@ -1,7 +1,10 @@
 import random
-n, m = int(input()), int(input())
-a, b = int(input()), int(input())
+n, m = int(input('Количество столбцов: ')), int(input('Количество строк: '))
+a, b = int(input('Интервал от: ')), int(input('до: '))
+matrix = []
 for i in range(n):
-    print()
+    l = []
+    matrix.append(l)
     for j in range(m):
-        print(random.randrange(a, b), end=' ')
+        l.append(random.randrange(a, b+1))
+    print(matrix[i])

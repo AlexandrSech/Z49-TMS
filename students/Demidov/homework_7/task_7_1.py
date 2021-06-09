@@ -1,9 +1,9 @@
-def dm_to_sm():
+def inch_to_sm():
   dm = int(input("Enter a value: "))
   sm = dm * 2.54
   return f'{dm} dm is {sm} sm'
 
-print(dm_to_sm())
+print(inch_to_sm())
 
 
 def sm_to_dm():

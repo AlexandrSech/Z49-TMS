@@ -8,6 +8,8 @@ for i in range(n):
     for j in range(m):
         l.append(random.randrange(a, b+1))
     print(matrix[i])
+print()
+
 
 max_el = 0
 min_el = b
@@ -22,25 +24,27 @@ for item, value in enumerate(matrix):
 print('Максимальный элемент матрицы:', max_el)
 print('Минимальный элемент матрицы:', min_el)
 print('Сумма всех элементов:', summ)
+print()
 
 
-max_res = []
-index_max = 0
-index_min = 0
-puk = 0
-pik = m*b
+
+summ_lst = []
 for j, i in enumerate(matrix):
     res = 0
     for k in range(len(i)):
         res += i[k]
-    max_res.append(res)
-    if puk < res:
-        puk = res
-        index_max = j
-    if pik > res:
-        pik = res
-        index_min = j
-print('Суммы ряда:', max_res)
-print('Индекс ряда с максимальной суммой элементов:', index_max)
-print('Индекс ряда с минимальной суммой элементов:', index_min)
+    summ_lst.append(res)
+print('Суммы рядов:', summ_lst)
+print('Индекс ряда с максимальной суммой элементов:', summ_lst.index(max(summ_lst)))
+print('Индекс ряда с минимальной суммой элементов:', summ_lst.index(min(summ_lst)))
+print()
 
+column_sum = []
+for j in range(n):
+    ssumm = 0
+    for i in range(m):
+        ssumm += matrix[i][j]
+    column_sum.append(ssumm)
+print('Сумма столбцов:', column_sum)
+print('Индекс колонки с максимальной суммой элементов:', column_sum.index(max(column_sum)))
+print('Индекс колонки с минимальной суммой элементов:', column_sum.index(min(column_sum)))

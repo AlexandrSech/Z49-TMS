@@ -19,10 +19,19 @@ for item, value in enumerate(matrix):
         if j < min_el:
             min_el = j
         summ += j
-
+max_res = []
+index_max = 0
+puk = 0
+for j, i in enumerate(matrix):
+    res = 0
+    for k in range(len(i)):
+        res += i[k]
+    max_res.append(res)
+    if puk < res:
+        puk = res
+        index_max = j
+print('Суммы ряда:', max_res)
+print('Индекс ряда с максимальной суммой элементов:', index_max)
 print('Максимальный элемент матрицы:', max_el)
 print('Минимальный элемент матрицы:', min_el)
 print('Сумма всех элементов:', summ)
-
-
-git commit -am пункт4

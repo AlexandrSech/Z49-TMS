@@ -55,3 +55,13 @@ for i in range(n):
         if i != j:
             matrix[i][j] = 0
     print(matrix[i])
+print()
+
+
+
+matrix_a = [[random.randrange(a, b+1) for i in range(n)] for j in range(m)]
+matrix_b = [[random.randrange(a, b+1) for i in range(n)] for j in range(m)]
+for i in range(n):
+    print(matrix_a[i], '    ', matrix_b[i])
+
+

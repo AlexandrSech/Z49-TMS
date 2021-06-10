@@ -48,3 +48,10 @@ for j in range(n):
 print('Сумма столбцов:', column_sum)
 print('Индекс колонки с максимальной суммой элементов:', column_sum.index(max(column_sum)))
 print('Индекс колонки с минимальной суммой элементов:', column_sum.index(min(column_sum)))
+
+print('\n' + 'Обнуленная матрица:')
+for i in range(n):
+    for j in range(m):
+        if i != j:
+            matrix[i][j] = 0
+    print(matrix[i])

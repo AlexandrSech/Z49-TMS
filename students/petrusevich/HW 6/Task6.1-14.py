@@ -63,5 +63,14 @@ matrix_a = [[random.randrange(a, b+1) for i in range(n)] for j in range(m)]
 matrix_b = [[random.randrange(a, b+1) for i in range(n)] for j in range(m)]
 for i in range(n):
     print(matrix_a[i], '    ', matrix_b[i])
+print()
 
 
+ssum = [[] for j in range(m)]
+razn = [[] for j in range(n)]
+for i in range(m):
+    for j in range(n):
+        ssum[i].append(matrix_a[i][j] + matrix_b[i][j])
+        razn[i].append(matrix_a[i][j] - matrix_b[i][j])
+for i in range(n):
+    print(ssum[i], '    ', razn[i])

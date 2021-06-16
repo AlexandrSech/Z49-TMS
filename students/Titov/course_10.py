@@ -1,5 +1,6 @@
-c = {2: 'sdg'}
-for i in c:
-    j = lambda i: i * 2
-    print(j)
-m = lambda x:
+def make_greeter(phrase):
+    prefix = phrase + ', '
+    def greeter(name):
+        return prefix + name
+    return greeter()
+casual_greeter = make_greeter('Hello')

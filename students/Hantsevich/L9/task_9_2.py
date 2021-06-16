@@ -1,1 +1,0 @@
-print((lambda **kwargs: {k*2: v for k, v in kwargs.items()})(abc=5, de=1, fbb=4, fdfasfs=2))

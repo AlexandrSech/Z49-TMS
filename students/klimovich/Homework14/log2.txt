@@ -1,0 +1,7 @@
+запуск программы Promodoro в time.struct_time(tm_year=2021, tm_mon=6, tm_mday=26, tm_hour=14, tm_min=42, tm_sec=58, tm_wday=5, tm_yday=177, tm_isdst=0)
+запуск программы Promodoro в time.struct_time(tm_year=2021, tm_mon=6, tm_mday=26, tm_hour=14, tm_min=44, tm_sec=45, tm_wday=5, tm_yday=177, tm_isdst=0)
+запуск программы Promodoro в time.struct_time(tm_year=2021, tm_mon=6, tm_mday=26, tm_hour=14, tm_min=45, tm_sec=40, tm_wday=5, tm_yday=177, tm_isdst=0)
+запуск программы Promodoro в time.struct_time(tm_year=2021, tm_mon=6, tm_mday=26, tm_hour=14, tm_min=48, tm_sec=5, tm_wday=5, tm_yday=177, tm_isdst=0)
+запуск программы Promodoro-DoHomework в time.struct_time(tm_year=2021, tm_mon=6, tm_mday=26, tm_hour=14, tm_min=49, tm_sec=14, tm_wday=5, tm_yday=177, tm_isdst=0)
+запуск программы Promodoro-DoHomework в time.struct_time(tm_year=2021, tm_mon=6, tm_mday=26, tm_hour=14, tm_min=49, tm_sec=49, tm_wday=5, tm_yday=177, tm_isdst=0)
+запуск программы Promodoro-DoHomework в time.struct_time(tm_year=2021, tm_mon=6, tm_mday=26, tm_hour=14, tm_min=50, tm_sec=13, tm_wday=5, tm_yday=177, tm_isdst=0)

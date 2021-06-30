@@ -4,11 +4,16 @@
 
 import requests
 import json
-import csv
-response = requests.get("https://api.openweathermap.org/data/2.5/forecast?q=Minsk&cnt=5&appid=ad9850d93aa3036db2fd25c4d3bc30af")
-#todos = json.loads(response.text)
-#print(todos)
+
+response = requests.get("https://api.openweathermap.org/data/2.5/forecast?q=Minsk&cnt=40&units=metric&appid=ad9850d93aa3036db2fd25c4d3bc30af")
+m, n = 0, 0
 with open('whether.json', 'w+') as f:
     json.dump(response.text, f)
-with open('whether.json') as am:
-    print(json.loads(am.read()))
+    slov = json.loads(response.text)
+    for i in slov['list']:
+        m += i['main']['temp']
+        n += i['wind']['speed']
+    print("Средняя скорость ветра =", n / 40, ', а средняя температура =', m / 40)
+
+
+

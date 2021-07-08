@@ -9,6 +9,8 @@ class SQL_Generator:
         return self.connector.execute('select * from {};'.format(self.table))
 
 
+
+
 class Holiday(SQL_Generator):
     def __init__(self, connector):
         super().__init__(connector, 'holiday')

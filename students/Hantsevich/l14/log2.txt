@@ -1,0 +1,23 @@
+ilijah: Запуск My_task  -  Tue Jul  6 18:07:33 2021
+ilijah(My_task): Цикл 1  -  Tue Jul  6 18:07:33 2021
+ilijah(My_task): Перерыв 1 минут  -  Tue Jul  6 18:07:33 2021
+ilijah(My_task): Цикл 2  -  Tue Jul  6 18:07:33 2021
+ilijah(My_task): Перерыв 1 минут  -  Tue Jul  6 18:07:33 2021
+ilijah: Запуск My_task  -  Tue Jul  6 18:09:36 2021
+ilijah(My_task): Цикл 1  -  Tue Jul  6 18:09:36 2021
+ilijah(My_task): Перерыв 1 минут  -  Tue Jul  6 18:09:36 2021
+ilijah(My_task): Цикл 2  -  Tue Jul  6 18:09:36 2021
+ilijah(My_task): Перерыв 1 минут  -  Tue Jul  6 18:09:36 2021
+ilijah(My_task): Окончание работы  -  1
+ilijah: Запуск My_task  -  Tue Jul  6 18:10:20 2021
+ilijah(My_task): Цикл 1  -  Tue Jul  6 18:10:20 2021
+ilijah(My_task): Перерыв 1 минут  -  Tue Jul  6 18:10:20 2021
+ilijah(My_task): Цикл 2  -  Tue Jul  6 18:10:20 2021
+ilijah(My_task): Перерыв 1 минут  -  Tue Jul  6 18:10:20 2021
+ilijah(My_task): Окончание работы  -  Tue Jul  6 18:10:20 2021
+ilijah: Запуск My_task  -  Wed Jul  7 05:45:42 2021
+ilijah(My_task): Цикл 1  -  Wed Jul  7 05:45:42 2021
+ilijah(My_task): Перерыв 1 минут  -  Wed Jul  7 05:45:42 2021
+ilijah(My_task): Цикл 2  -  Wed Jul  7 05:45:42 2021
+ilijah(My_task): Перерыв 1 минут  -  Wed Jul  7 05:45:42 2021
+ilijah(My_task): Окончание работы  -  Wed Jul  7 05:45:42 2021

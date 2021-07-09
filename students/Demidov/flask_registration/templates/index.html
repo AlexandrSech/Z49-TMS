@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}Register System{% endblock %}
+
+{% block content %}
+
+{% if message  %}
+    <div class="alert alert-secondary" role="alert">
+        <p>{{ message }}</p>
+    </div>
+{% endif %}
+
+<section class="section">
+    <div class="left-side">
+      <h1>Create Account</h1>
+      <div class="social">
+        <img src="{{url_for('static', filename='img/facebook.svg')}}" />
+        <img src="{{url_for('static', filename='img/VK.svg')}}" />
+        <img src="{{url_for('static', filename='img/linkedin.svg')}}" />
+        <img src="{{url_for('static', filename='img/google.svg')}}" />
+      </div>
+      <span id="use">use this form for registration</span>
+      <form method="POST" action="" class="form">
+        <input type="text" placeholder="Name" name="fullname" id="inputFullName" aria-describedby="emailHelp">
+        <input type="email" name="email" id="InputEmail" placeholder="Email">
+        <input type="password" name="password1" placeholder="Password" id="InputPassword">
+        <input type="password" name="password2" id="InputPassword2" placeholder="Repeat Password">
+        <div class="buttons">
+          <button class="button" type="submit">Register</button>
+        </div>
+        <p>Already registered?<a href="/login">Log in</a></p>
+      </form>
+    </div>
+    <div class="right-side">
+      <img src="{{url_for('static', filename='img/illustration.svg')}}" />
+    </div>
+</section>
+
+
+
+{% endblock %}

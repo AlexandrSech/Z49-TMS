@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #d3bfe0;
+}
+
+.section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 15px;
+  background-color: #fff;
+  max-width: 1090px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.left-side {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 62px;
+  padding-bottom: 62px;
+  padding-left: 113px;
+}
+.left-side h1 {
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 54px;
+  color: #9245F3;
+}
+.left-side span {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #3A3A3A;
+}
+#use {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.social {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+.social img {
+  margin-right: 25px;
+  cursor: pointer;
+  transition: 0.6s ease;
+}
+.social img:last-child {
+  margin-right: 0;
+}
+.social img:hover {
+  transform: rotate(360deg);
+  transition: 0.6s ease;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.form input[type=text], input[type=email], input[type=password] {
+  background-color: #F7F8F9;
+  border: 1px solid #D2E1E5;
+  box-sizing: border-box;
+  border-radius: 8px;
+  outline: none;
+  color: #9245F3 !important;
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #D2E1E5;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 30px;
+  margin-bottom: 21px;
+  transition: 0.3s ease;
+}
+.form input[type=checkbox] {
+  cursor: pointer;
+}
+.form input:hover {
+  border: 1px solid #9245F3;
+  background-color: #F9F4FF;
+  transition: 0.3s ease;
+}
+.form input::placeholder {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #D2E1E5;
+}
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+.checkbox span {
+  margin-left: 10px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: #3A3A3A;
+}
+#color {
+  margin-left: 0;
+  color: #9245F3;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+#color:hover {
+  color: #B376FF;
+  transition: 0.3s ease;
+  border-bottom: 1px solid #B376FF;
+}
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.button {
+  background-color: #9245F3;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: #FFFFFF;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 45px;
+  padding-left: 45px;
+  transition: 0.3s ease;
+}
+.button:hover {
+  background-color: #B376FF;
+  transition: 0.3s ease;
+}
+.form p {
+  margin-top: 30px;
+}

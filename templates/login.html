@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Login System{% endblock %}
+
+{% block content %}
+
+{% if message  %}
+    <div class="alert alert-secondary" role="alert">
+        <p>{{ message }}</p>
+    </div>
+{% endif %}
+<section class="section">
+  <div class="left-side">
+    <h1>Log in</h1>
+    <div class="social">
+      <img src="{{url_for('static', filename='img/facebook.svg')}}" />
+      <img src="{{url_for('static', filename='img/VK.svg')}}" />
+      <img src="{{url_for('static', filename='img/linkedin.svg')}}" />
+      <img src="{{url_for('static', filename='img/google.svg')}}" />
+    </div>
+    <span id="use">use this form for Log in</span>
+    <form method="POST" action="" class="form">
+      <input type="email" name="email" id="InputEmail" placeholder="Email">
+      <input type="password" name="password" placeholder="Password" id="InputPassword">
+      <div class="buttons">
+        <button class="button" type="submit">Log in</button>
+      </div>
+      <p>Not registered?<a href="/login">Register</a></p>
+    </form>
+  </div>
+  <div class="right-side">
+    <img src="{{url_for('static', filename='img/illustration.svg')}}" />
+  </div>
+</section>
+{% endblock %}

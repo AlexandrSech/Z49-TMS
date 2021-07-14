@@ -8,15 +8,24 @@
 <p>Добро пожаловать на страницу регистрации.</p>
 <p>Пожалуйста, обязательно заполните все поля.</p>
 </br>
+
+</br>
+{% for msg in get_flashed_messages() %}
+{{msg}}
+{% endfor %}
+
 <form method="post">
     <p>Введите пожалуйста username</p>
     <input name="username" type="text" value="" requied />
     <p>Введите пожалуйста email</p>
     <input name="email" type="email" value="" requied />
     <p>Введите пожалуйста password</p>
-    <input name="password" type="password" value="" requied / />
+    <input name="password" type="password" value="" requied />
+    <p>Повторите Ваш password</p>
+    <input name="password2" type="password" value="" requied />
 
     <input type="submit">
 </form>
+
 </body>
 </html>

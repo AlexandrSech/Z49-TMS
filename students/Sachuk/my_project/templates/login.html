@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Страница авторизации</title>
+</head>
+<body>
+{% for msg in get_flashed_messages() %}
+{{msg}}
+{% endfor %}
+<form method="post">
+  <p><label>Username: </label><input type="text" name="username" value=""></p>
+  <p><label>Password: </label><input type="password" name="password" value=""></p>
+  <p><input type="checkbox" name="remember">Запомнить меня</p>
+  <p><input type="submit" value="Войти"></p>
+
+  <p><label>Если Вы не зарегистрированы, пройдите по <a href="{{url_for('registration')}}">ссылке</a></label></p>
+</form>
+</body>
+</html>

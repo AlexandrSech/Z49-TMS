@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Страница чата</title>
+</head>
+<body>
+{% for mes in messages %}
+<li>{{mes.date}} {{mes.username}} {{mes.text}}</li>
+{% endfor %}
+
+<form method="post">
+    <p>Введите пожалуйста сообщение</p>
+    <input name="text" type="text">
+    <input type="submit" value="Отправить сообщение">
+</form>
+</body>
+</html>

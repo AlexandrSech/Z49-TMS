@@ -17,50 +17,96 @@
 
 
 def func1(x):  # Дюймы в сантиметры
-    return x * 2.54
+    try:
+        x = int(x)
+    except ValueError:
+        return 'Введите число'
+    return round(x * 2.54, 2)
 
 
 def func2(x):  # Сантиметры в дюймы
-    return x / 2.54
+    try:
+        x = int(x)
+    except ValueError:
+        return 'Введите число'
+    return round(x / 2.54, 2)
 
 
 def func3(x):  # Мили в километры
-    return x * 1.61
+    try:
+        x = int(x)
+    except ValueError:
+        return 'Введите число'
+    return round(x * 1.61, 2)
 
 
 def func4(x):  # Километры в мили
-    return x / 1.61
+    try:
+        x = int(x)
+    except ValueError:
+        return 'Введите число'
+    return round(x /1.61, 2)
 
 
 def func5(x):  # Фунты в килограммы
-    return x * 0.4535
+    try:
+        x = int(x)
+    except ValueError:
+        return 'Введите число'
+    return round(x * 0.4535, 4)
 
 
 def func6(x):  # Килограммы в фунты
-    return x / 0.4535
+    try:
+        x = int(x)
+    except ValueError:
+        return 'Введите число'
+    return round(x / 0.4535, 4)
 
 
 def func7(x):  # Унции в граммы
-    return x * 28.35
+    try:
+        x = int(x)
+    except ValueError:
+        return 'Введите число'
+    return round(x * 28.35, 2)
 
 
 def func8(x):  # Граммы в унции
-    return x / 28.35
+    try:
+        x = int(x)
+    except ValueError:
+        return 'Введите число'
+    return round(x / 28.35, 2)
 
 
 def func9(x):  # Галлон в литры
-    return x * 4.546
+    try:
+        x = int(x)
+    except ValueError:
+        return 'Введите число'
+    return round(x * 4.546, 3)
 
 
 def func10(x):  # Литры в галлоны
-    return x / 4.546
+    try:
+        x = int(x)
+    except ValueError:
+        return 'Введите число'
+    return round(x / 4.546, 3)
 
 
 def func11(x):  # Пинты в литры
-    return x * 0.5683
+    try:
+        x = int(x)
+    except ValueError:
+        return 'Введите число'
+    return round(x * 0.5683, 4)
 
 
 def func12(x):  # Литры в пинты
-    return x / 0.5683
-
-
+    try:
+        x = int(x)
+    except ValueError:
+        return 'Введите число'
+    return round(x / 0.5683, 4)

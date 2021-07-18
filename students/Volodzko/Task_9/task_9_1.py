@@ -9,7 +9,7 @@ def power():
         "Синяй БМВ",
         "Зелёная Ауди"
     ]
-    result = ["{} - {}".format(i, "string") for i in list_lines]
-    print(result)
+    result = ["{} - {}".format(i, ii) for i, ii in enumerate(list_lines)]
+    return result
 
-power()
+print(power())

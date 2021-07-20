@@ -13,10 +13,10 @@ class Car:
     __speed: int = 0  # Скорость
 
     def __init__(self, mark, model, year, speed):
-        self.__mark = mark
-        self.__model = model
-        self.__year = year
-        self.__speed = speed
+        self.mark = mark
+        self.model = model
+        self.year = year
+        self.speed = speed
 
     @property
     def mark(self):
@@ -24,10 +24,14 @@ class Car:
 
     @mark.setter
     def mark(self, mark):
-        if mark.lower().isalpha():
-            self.__mark = mark
-        else:
-            print("Некоректрно указана марка автомобиля!")
+        try:
+            if mark.lower().isalpha():
+                self.__mark = mark
+            else:
+                print("Некоректрно указана марка автомобиля!")
+        except:
+            print('Не корректно указана марка')
+            self.__mark = ''
 
     @property
     def model(self):
@@ -35,10 +39,7 @@ class Car:
 
     @model.setter
     def model(self, model):
-        if model.lower().isalpha():
-            self.__model = model
-        else:
-            print("Некоректрно указана марка автомобиля!")
+        self.__model = model
 
     @property
     def year(self):
@@ -46,10 +47,15 @@ class Car:
 
     @year.setter
     def year(self, year):
-        if 1950 < year < 2021:
-            self.__year = year
-        else:
-            print("Не верно указан год автомобиля!")
+        try:
+            year = int(year)
+            if 1950 < year < 2021:
+                self.__year = year
+            else:
+                print("Не верно указан год автомобиля!")
+        except:
+            print('Не корректно указан год')
+            self.__year = 0
 
     @property
     def speed(self):
@@ -57,18 +63,29 @@ class Car:
 
     @speed.setter
     def speed(self, speed):
-        if 0 > speed > 350:
+        try:
+            speed = int(speed)
+            if speed < 0 or speed > 350:
+                print("Неверно указана скорость автомобиля")
+                self.__speed = 0
+            else:
+                self.__speed = speed
+        except:
             print("Неверно указана скорость автомобиля")
-        else:
-            self.__speed = speed
+            self.__speed = 0
 
     def speed_inc(self):  # Увеличение скорости
         self.__speed += 5
         return self.__speed
 
     def speed_dec(self):  # Уменьшение скорости
+
         self.__speed -= 5
-        return self.__speed
+        if self.__speed <= 0:
+            self.__speed = 0
+            return self.__speed
+        else:
+            return self.__speed
 
     def stop(self):  # Остановка
         self.__speed = 0
@@ -82,7 +99,9 @@ class Car:
         print(self.__speed)
 
 
-car = Car("Toyota", "Camry", 2005, 25)
+car = Car(111, "Camry", 2005, -25)
+print(car.mark)
+print(car.speed)
 car.speed_inc()
 car.display()
 car.stop()

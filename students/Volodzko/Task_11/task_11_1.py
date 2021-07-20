@@ -13,9 +13,10 @@ class Dog:
     __name: str  # Имя собаки
 
     def __init__(self, weigh, height, name):
-        self.__weight = weigh
-        self.__height = height
-        self.__name = name
+
+        self.weight = weigh
+        self.height = height
+        self.name = name
 
     @property
     def weight(self):
@@ -23,10 +24,14 @@ class Dog:
 
     @weight.setter
     def weight(self, weight):
-        if int(weight) < 0:
-            print("Недопустимы вес для собаки!")
+        if type(weight) in [float, int]:
+            if weight <= 0:
+                print("Недопустимы вес для собаки!")
+            else:
+                self.__weight = int(weight)
         else:
-            self.__weight = int(weight)
+            print("Не корректно указан вес")
+            self.__weight = 0
 
     @property
     def height(self):
@@ -34,10 +39,15 @@ class Dog:
 
     @height.setter
     def height(self, height):
-        if int(height) < 10:
-            print("Недопустимы рост для собаки")
+        if type(height) in [float, int]:
+            if height < 10:
+                print("Недопустимы рост для собаки")
+            else:
+                self.__height = int(height)
         else:
-            self.__height = int(height)
+            print("Не корректно указан рост")
+            self.__height = 0
+
 
     @property
     def name(self):
@@ -49,6 +59,7 @@ class Dog:
             self.__name = name
         else:
             print("Некоректное имя!")
+            self.__name = ''
 
     def Jump(self):
         print("Собака прыгает!")
@@ -341,11 +352,11 @@ class ClientBank:
 
 # Тестируем класс Dog
 print("Тестируем класс Dog!!!!!")
-dog = Dog(5, 20, "Broono")
+dog = Dog("df", 20, "Broono1")
 print(f"Имя собаки {dog.name}, вес собаки {dog.weight}, рост собаки {dog.height}")
 print("." * 50)
 dog.name = "Gr1f"
-dog.weight = "23"
+dog.weight = "2ф"
 dog.height = "15"
 print(f"Имя собаки {dog.name}, вес собаки {dog.weight}, рост собаки {dog.height}")
 dog.Jump()

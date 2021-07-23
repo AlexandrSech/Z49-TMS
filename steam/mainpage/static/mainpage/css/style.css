@@ -112,3 +112,95 @@ body {
     width: 1px;
     background-color: #2C313D;
 }
+.card {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 872px;
+    height: 480px;
+}
+.card-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 40px;
+    padding-top: 56px;
+    padding-bottom: 56px;
+}
+.card-subtitle {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #ECEFF4;
+    opacity: 0.6;
+    margin-bottom: 8px;
+}
+.card-title {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 48px;
+    color: #ECEFF4;
+    margin-bottom: 12px;
+}
+.card-description {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #ECEFF4;
+    opacity: 0.6;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+.card-price {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: right;
+    color: #ECEFF4;    
+}
+.card-price img {
+    width: 16.75px !important;
+    height: 16.75px !important;
+    margin-left: 12px;
+}
+.buy {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #ECEFF4;
+    margin-top: 140px;
+}
+.cyberpunk {
+    background-color: #47451D;
+    border-radius: 24px;
+}
+#main-img {
+    position: absolute;
+    bottom: 0;
+    left: 35%;
+    max-width: 386px;
+    max-height: 454px;
+}
+.card-images {
+    padding-right: 40px;
+}
+.card-images #game-logo {
+    height: auto;
+    padding-top: 56px;
+}
+.swiper-slide {
+    background-color: transparent !important;
+    border-radius: 24px;
+}

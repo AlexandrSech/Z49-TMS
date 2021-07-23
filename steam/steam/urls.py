@@ -18,11 +18,14 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from users import views
+from users.forms import UserAuthentication
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('mainpage.urls')),
     path('register/', views.register, name="reg"),
+    path('login/', auth_views.LoginView.as_view(template_name='users/login.html', authentication_form=UserAuthentication), name='login'),
 ]
 
 if settings.DEBUG:

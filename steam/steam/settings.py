@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+import socket
 from .secret import *
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -81,13 +82,12 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'steam',
-        'USER': 'tim2',
+        'USER': 'tim',
         'PASSWORD': '2554963demidovT!',
         'HOST': 'localhost',
         'POST': '',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -135,5 +135,13 @@ MEDIA_URL = '/media/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL = 'home'
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = socket.gethostbyname('smtp.gmail.com')
+EMAIL_HOST_USER = "demidovbest@gmail.com"
+EMAIL_HOST_PASSWORD = "krpzqedtsnnewluj"
+EMAIL_PORT = 587
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'

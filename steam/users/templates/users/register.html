@@ -1,10 +1,9 @@
 {% extends 'mainpage/base.html' %}
 
 {% load static %}
-{% load crispy_forms_tags %}
 
 {% block title %}
-    Steam | Register
+    Sign In
 {% endblock title %}
  
 {% block head %}
@@ -12,11 +11,18 @@
 
 {% block main %}
     <section class="section">
-        <h2>Регистрация</h2>
-        <form method="post">
+        <h2>Sign In</h2>
+        <form method="POST" class="reg-form">
             {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit">Отправить</button>
+            <span>Username</span>
+            {{ form.username }}
+            <span>Your email</span>
+            {{ form.email }}
+            <span>Your password</span>
+            {{ form.password1 }}
+            <span>Repeat password</span>
+            {{ form.password2 }}
+            <button type="submit" class="button-reg">Let's go!</button>
         </form>
     </section>
 {% endblock main %}

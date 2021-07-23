@@ -285,6 +285,63 @@ body {
     max-width: 1320px;
     margin: 0 auto;
 }
-form {
+.section h2 {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 48px;
+    color: #ECEFF4;
+    margin-bottom: 12px;
+    text-align: start;
+}
+.reg-form {
+    display: flex;
+    flex-direction: column;
     color: #fff;
+    max-width: 300px;
+}
+.reg-form span {
+    margin-bottom: 10px;
+}
+#id_username,
+#id_email,
+#id_password,
+#id_password1,
+#id_password2 {
+    outline: none;
+    border: 2px solid #2C313D;
+    background-color: transparent;
+    border-radius: 8px;
+    padding: 10px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.button-reg {
+    outline: none;
+    border: none;
+    background: linear-gradient(270deg, #2562CD 0%, #5FA1EC 52.08%, #3B9EEE 100%);
+    border-radius: 8px;
+    margin-top: 15px;
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 23px;
+    padding-left: 23px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.button-reg:hover {
+    transition: 0.3s ease;
+    box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.25);
+}
+.messages {
+    background-color: #1D2944;
+    color: #fff;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }

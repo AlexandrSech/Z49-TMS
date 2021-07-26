@@ -1,0 +1,9 @@
+.main_content{
+    background-color: red;
+
+    position: absolute;
+    left: 15%;
+    top: 10%;
+    height: 200px;
+    width: 300px;
+}

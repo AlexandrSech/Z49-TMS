@@ -1,0 +1,27 @@
+
+h3{
+color: red;
+}
+
+a{
+color: yellow;
+}
+
+#qwe{
+color: blue;
+
+width: 400px;
+height: 400px;
+background-color: red;
+}
+
+.class_div_2{
+color: red;
+}
+
+#main_div{
+height: 100%;
+width: 100%;
+
+background-color: red;
+}

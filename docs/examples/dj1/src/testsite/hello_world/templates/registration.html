@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}REGISTRSTION PAGE{% endblock %}
+
+{% block content %}
+<form method="POST" action="{% url 'index' %}">
+    <p>User name: <input type="text" name="user_name"></p>
+    <p>Password: <input type="text" name="password"></p>
+    <input type="submit">
+</form>
+<p><a href="{% url 'index' %}">Логин</a></p>
+{% endblock %}

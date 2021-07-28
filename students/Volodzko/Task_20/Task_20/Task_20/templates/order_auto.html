@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Заказать авто{% endblock %}
+{% block content %}
+<p>Заказ авиабилета</p>
+<form method="POST" class="row g-3">
+    <input type="text" class="form-control" placeholder="Введите ваше имя" name="first_name"><br>
+    <input type="text" class="form-control" placeholder="Введите место вылета" name="where_from"><br>
+    <input type="text" class="form-control" placeholder= "Введите место прилёта" name="where"><br>
+    <input type="text" class="form-control" placeholder="Введите количество человек" name="count_people"><br>
+    <input type="date" class="form-control" placeholder= "Введите дату" name="data_fly"><br>
+    <input type="submit" class="btn btn-primary" value="Заказать"><br>
+
+</form>
+{% endblock %}

@@ -1,7 +1,7 @@
 # Z49-TMS
 
 # Django-steam web application
-## This is a django-based diploma application
+## This is a django-based steam application
 
 ### Django-steam включает в себя:
 * Регистрация, вход и выход из системы.

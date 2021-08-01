@@ -1,4 +1,4 @@
-from chat import Chat
+from config import Chat
 
 class User(Chat):
     '''отправить сообщение,получить список сообщений,хранение имени пользователя'''

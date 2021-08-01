@@ -1,0 +1,12 @@
+{% extends "authentication/base.html" %}
+
+{% block title %}LOGIN PAGE{% endblock %}
+
+{% block content %}
+<form method="POST">
+    <input type="text" name="user_name"></br>
+    <input type="password" name="password"></br>
+    <input type="submit">
+</form>
+<p><a href="{% url 'registration' %}">Регистрация</a></p>
+{% endblock %}

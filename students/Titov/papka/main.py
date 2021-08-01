@@ -1,8 +1,8 @@
-import chat
+import config
 import user
 
 
-my_chat = chat.Chat()
+my_chat = config.Chat()
 user1 = user.User('Artem')
 
 user1.send_message('abrakadabra')

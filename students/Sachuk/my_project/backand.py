@@ -106,7 +106,7 @@ def add_info():
     if request.method == 'GET':
         res = Profiles.query.filter_by(user_id=session['id']).first()
         if res != None:
-            return redirect(url_for('chat'))
+            return redirect(url_for('config'))
         else:
             return render_template('add_info.html', title='Добавьте информацию о себе')
     elif request.method == 'POST':
@@ -132,11 +132,11 @@ def add_info():
         return render_template('successful.html')
 
 
-@app.route('/chat', methods=['POST', 'GET'])
+@app.route('/config', methods=['POST', 'GET'])
 def chat():
     if request.method == 'GET':
         messages = Messages.query.all()
-        return render_template('chat.html', title='Страница чата', messages=messages)
+        return render_template('config.html', title='Страница чата', messages=messages)
     if request.method == 'POST':
         try:
             m = Messages(mes_username=session['username'], text=request.form['text'])
@@ -146,7 +146,7 @@ def chat():
         except Exception as e:
             db.session.rollback()
             print('Ошибка добавления в БД')
-    return render_template('chat.html', title='Страница чата')
+    return render_template('config.html', title='Страница чата')
 
 
 @app.route('/logout', methods=['POST'])

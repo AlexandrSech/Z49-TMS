@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %} Главная {% endblock %}
+
+{% block content %}
+
+<h8>Краткая нфомация о всех пользователях:</h8></br>
+{% for item in list_users %}
+<form method="GET" action="{% url 'detail' user_id=item.id%}">
+
+id: {{item.id}}</br>
+first_name: {{item.first_name}}</br>
+last_name: {{item.last_name}}</br>
+    <input type="submit" value="Подробно">
+</form>
+</br></br>
+{% endfor %}
+
+{% endblock %}

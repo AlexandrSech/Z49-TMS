@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %} Детальная {% endblock %}
+
+{% block content %}
+
+<h8>Полная инфомация о всех пользователях:</h8></br>
+{% for i in user %}
+
+
+<form method="POST" action="{% url 'detail' user_id=i.id %}">
+    id: {{i.id}} <input type="text" name="Id" ></br>
+    first_name: {{i.first_name}} <input type="text" name="Имя" ></br>
+    last_name: {{i.last_name}} <input type="text" name="Фамилия" ></br>
+    age: {{i.age}} <input type="text" name="Возраст" ></br>
+    profession: {{i.profession}} <input type="text" name="Профессия" ></br>
+    <input type="submit" value="Изменить"></br>
+</form>
+
+
+<form method="GET" action="{% url 'delete' %}">
+    <input type="hidden" name="id" value="{{i.id}}">
+    <input type="submit" value="Удалить пользователя">
+
+</form>
+
+<form method="GET" action="{% url 'main' %}">
+    <input type="submit" value="Назад">
+</form>
+
+</br>
+
+{% endfor %}
+
+{% endblock %}

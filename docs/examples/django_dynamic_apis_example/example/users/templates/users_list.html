@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Users list PAGE{% endblock %}
+
+{% block head %}{% endblock %}
+
+{% block content %}
+
+{% load static %}
+
+
+    {% for index in users_list %}
+    <p><a href="{% url 'profile' index.id %}">{{ index.login }}</a></p>
+    {% endfor %}
+
+
+
+
+
+{% endblock %}

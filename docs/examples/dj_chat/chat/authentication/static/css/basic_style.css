@@ -1,0 +1,69 @@
+.main_content{
+position: absolute;
+
+top:0px;
+left: 0px;
+width: 100%;
+height: 100%;
+}
+
+
+#message_list{
+//background-color: grey;
+
+position: absolute;
+left: 0px;
+top: 20px;
+width: 100%;
+}
+
+.message_list_message_block{
+background-color: rgb(19, 25, 34);
+
+position: absolute;
+left: 0px;
+width: 100%;
+}
+
+.message_list_user_name, .message_list_text, .message_list_time{
+color: white;
+}
+
+.message_list_user_name{
+background-color: rgb(23, 31, 40);
+
+position: absolute;
+left: 20px;
+width: calc(10% - 20px);
+}
+
+.message_list_text{
+background-color: rgb(19, 25, 34);
+
+position: absolute;
+left: calc(10% + 2px);
+width: calc(80% - 2px);
+}
+
+
+.message_list_time{
+background-color: rgb(23, 31, 40);
+
+position: absolute;
+left: calc(90% + 2px);
+width: calc(10% - 2px);
+}
+
+#new_message{
+background-color: grey;
+
+position: fixed;
+left:0px;
+width:100%;
+bottom: 0px;
+}
+
+#new_message_text{
+left: 20px;
+width:90%;
+}

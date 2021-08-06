@@ -18,8 +18,9 @@ def first_template():
     return render_template('ft.html')
 
 
-@app.route('/new_data')
-def new_data():
+@app.route('/new_data/<str:user_name>')
+def new_data(user_name):
+    print(user_name)
     return ''
 
 

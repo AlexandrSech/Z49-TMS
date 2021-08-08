@@ -24,13 +24,18 @@ class MyTime:
 
     @hours.setter
     def hours(self, hours):
-        if hours > 24:
-            self.__hours = hours % 24
-        elif hours < 0:
+        try:
+            hours = int(hours)
+            if hours > 24:
+                self.__hours = hours % 24
+            elif hours < 0:
 
-            self.__hours = 24 - abs(hours) % 24
-        else:
-            self.__hours = hours
+                self.__hours = 24 - abs(hours) % 24
+            else:
+                self.__hours = hours
+        except:
+            print("Не корректно указано время")
+            self.__hours = None
 
     @property
     def minutes(self):
@@ -38,11 +43,16 @@ class MyTime:
 
     @minutes.setter
     def minutes(self, minutes):
-        if 0 <= minutes < 60:
-            self.__minutes = minutes
-        else:
-            self.__hours += minutes // 60
-            self.__minutes = minutes % 60
+        try:
+            minutes = int(minutes)
+            if 0 <= minutes < 60:
+                self.__minutes = minutes
+            else:
+                self.__hours += minutes // 60
+                self.__minutes = minutes % 60
+        except:
+            print("Не корректно указано время")
+            self.__minutes = None
 
     @property
     def seconds(self):
@@ -50,11 +60,16 @@ class MyTime:
 
     @seconds.setter
     def seconds(self, seconds):
-        if 0 <= seconds < 60:
-            self.__seconds = seconds
-        else:
-            self.__minutes += seconds // 60
-            self.__seconds = seconds % 60
+        try:
+            seconds = int(seconds)
+            if 0 <= seconds < 60:
+                self.__seconds = seconds
+            else:
+                self.__minutes += seconds // 60
+                self.__seconds = seconds % 60
+        except:
+            print("Не корректно указано время")
+            self.__seconds = None
 
     def __add__(self, other):  # Сложение времени
         return MyTime(self.hours + other.hours, self.minutes + other.minutes, self.seconds + other.seconds)
@@ -92,7 +107,13 @@ print("ПРОВЕРКА РАБОТЫ!!!!")
 
 t1 = MyTime(-50, 100, 0)
 print(t1)
-t2 = MyTime(11, 30, 15)
+ttt = MyTime(50, 70, 80)
+print(ttt)
+
+ttt2 = MyTime("sdsDa", -20, -30)
+print(ttt2)
+
+"""t2 = MyTime(11, 30, 15)
 print(t2)
 t3 = MyTime(15, 20, 30)
 print(t3)
@@ -102,4 +123,4 @@ print(t2 < t3)
 print(t2 >= t3)
 t4 = MyTime(11, 30, 15)
 print(t2 == t4)
-print(t2 == t3)
+print(t2 == t3)"""

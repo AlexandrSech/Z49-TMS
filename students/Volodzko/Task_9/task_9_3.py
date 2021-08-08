@@ -7,8 +7,17 @@
 
 def decoration(func):
     def wrapper(my_list):
-        func(my_list)
-        return [i for i in my_list if i % 2 != 0]
+        my_list2=[]
+        for i in my_list:
+            try:
+                i = int(i)
+            except:
+                my_list2.append(i)
+                continue
+            if i %2 != 0:
+                my_list2.append(i)
+        result = func(my_list2)
+        return result
 
     return wrapper
 
@@ -19,3 +28,4 @@ def func(my_list: list):
 
 
 print(func([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
+print(func(["a",2,3,True,5]))

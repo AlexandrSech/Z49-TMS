@@ -18,8 +18,8 @@ class Point:  # Класс описывающий координату точк�
     __y: int
 
     def __init__(self, x, y):
-        self.__x = x
-        self.__y = y
+        self.x = x
+        self.y = y
 
     @property
     def x(self):
@@ -27,7 +27,12 @@ class Point:  # Класс описывающий координату точк�
 
     @x.setter
     def x(self, x):
-        self.__x = x
+        try:
+            x = int(x)
+            self.__x = x
+        except:
+            print("X должно быть числом")
+            self.__x = None
 
     @property
     def y(self):
@@ -35,7 +40,12 @@ class Point:  # Класс описывающий координату точк�
 
     @y.setter
     def y(self, y):
-        self.__y = y
+        try:
+            y = int(y)
+            self.__y = y
+        except:
+            print("Y должно быть числом")
+            self.__y = None
 
 
 class Figure(metaclass=ABCMeta):  # Абстрактный класс произвольной фигуры, все методы обязательны для переопределения
@@ -54,7 +64,7 @@ class Circle(Figure):  # Круг
 
     def __init__(self, centre, radius):
         self.centre = centre
-        self.__radius = radius
+        self.radius = radius
 
     @property
     def radius(self):
@@ -62,13 +72,28 @@ class Circle(Figure):  # Круг
 
     @radius.setter
     def radius(self, radius):
-        self.__radius = radius
+        try:
+            radius = float(radius)
+            self.__radius = radius
+        except:
+            print("Не корректные данные")
+            self.__radius = None
 
     def area(self):
-        print(f"Площадь круга равна {round(3.14 * self.radius ** 2, 2)}")
+        if self.radius != None:
+            s = round(3.14 * self.radius ** 2, 2)
+            print(f"Площадь круга равна {s}")
+            return s
+        else:
+            return None
 
     def perimetr(self):
-        print(f"Пeриметр круга равен {round(2 * 3.14 * self.radius, 2)}")
+        if self.radius != None:
+            p = round(2 * 3.14 * self.radius, 2)
+            print(f"Пeриметр круга равен {p}")
+            return p
+        else:
+            return None
 
 
 class Triangle(Figure):
@@ -87,16 +112,28 @@ class Triangle(Figure):
         self.c = p3
 
     def perimetr(self):
-        self.__l1 = ((abs(self.b.x - self.a.x)) ** 2 + (abs(self.b.y - self.a.y)) ** 2) ** (1 / 2)
-        self.__l2 = ((abs(self.c.x - self.a.x)) ** 2 + (abs(self.c.y - self.a.y)) ** 2) ** (1 / 2)
-        self.__l3 = ((abs(self.c.x - self.b.x)) ** 2 + (abs(self.c.y - self.b.y)) ** 2) ** (1 / 2)
-        self.__perim = self.__l1 + self.__l2 + self.__l3
-        print(f"Периметр треугольника равен: {round(self.__perim, 2)}")
+        try:
+            self.__l1 = round(((abs(self.b.x - self.a.x)) ** 2 + (abs(self.b.y - self.a.y)) ** 2) ** (1 / 2), 2)
+            print(self.__l1)
+            self.__l2 = round(((abs(self.c.x - self.a.x)) ** 2 + (abs(self.c.y - self.a.y)) ** 2) ** (1 / 2), 2)
+            print(self.__l2)
+            self.__l3 = round(((abs(self.c.x - self.b.x)) ** 2 + (abs(self.c.y - self.b.y)) ** 2) ** (1 / 2), 2)
+            print(self.__l3)
+            self.__perim = round(self.__l1 + self.__l2 + self.__l3, 2)
+            print(f"Периметр треугольника равен: {self.__perim}")
+            return self.__perim
+        except:
+            print("Невозможно произвести вычесление")
+            return None
 
     def area(self):
-        per = self.__perim / 2  # Полупериметр
-        s = (per * (per - self.__l1) * (per - self.__l2) * (per - self.__l3)) ** (1 / 2)
-        print(f"Площадь треугольника равна: {round(s, 2)}")
+        try:
+            per = self.__perim / 2  # Полупериметр
+            s = (per * (per - self.__l1) * (per - self.__l2) * (per - self.__l3)) ** (1 / 2)
+            print(f"Площадь треугольника равна: {round(s, 2)}")
+        except:
+            print("Невозможно произвести вычесление")
+            return None
 
 
 class Square(Figure):
@@ -108,10 +145,26 @@ class Square(Figure):
     def __init__(self, p1, p2):
         self.a = p1
         self.b = p2
-        self.__l1 = ((abs(self.b.x - self.a.x)) ** 2 + (abs(self.b.y - self.a.y)) ** 2) ** (1 / 2)
+        try:
+            self.__l1 = round(((abs(self.b.x - self.a.x)) ** 2 + (abs(self.b.y - self.a.y)) ** 2) ** (1 / 2), 2)
+        except:
+            print("Не возможно посчитать длинну стороны квадрата")
+            self.__l1 = 0
 
     def perimetr(self):
-        print(f"Периметр квадрата равен: {self.__l1 * 4}")
+        try:
+            p = self.__l1 * 4
+            print(f"Периметр квадрата равен: {p}")
+            return p
+        except:
+            print("Невозможно произвести вычесление")
+            return None
 
     def area(self):
-        print(f"Площадь квадрата равена: {self.__l1 ** 2}")
+        try:
+            s = round(self.__l1 ** 2, 2)
+            print(f"Площадь квадрата равена: {s}")
+            return s
+        except:
+            print("Невозможно произвести вычесление")
+            return None

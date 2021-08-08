@@ -10,7 +10,7 @@ if __name__ == '__main__':
     print("." * 50)
 
     print("Треугольник:")
-    p1 = Point(2, 1)
+    p1 = Point("dasda", 1)
     p2 = Point(5, 2)
     p3 = Point(1, 3)
 

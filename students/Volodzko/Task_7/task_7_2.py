@@ -29,12 +29,20 @@ def convert():
     0. Выход из программы"""
     print(text)
     while True:
-        operation = int(input("Введите номер операции: "))
+        try:
+            operation = int(input("Введите номер операции: "))
+        except ValueError:
+            print('Введите число')
+            continue
         if operation == 0:
             print("ВЫ ВЫШЛИ ИЗ ПРОГРАММЫ!\n")
-            break
+            return 0
         else:
-            value = int(input("Введите значение, которое хотите конвертировать: "))
+            try:
+                value = int(input("Введите значение, которое хотите конвертировать: "))
+            except ValueError:
+                print("Конвертировать можно только число")
+                continue
         if operation == 1:
             result = task_7_1.func1(value)
             print(f"РЕЗУЛЬТАТ ПЕРЕВОДА: {result}\n")

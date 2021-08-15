@@ -30,6 +30,23 @@ def detail(request, user_id):
         print(user)
         return render(request, 'detail.html', {'user': user})
     if request.method == 'POST':
+        users_map = {
+            'first_name': 'Имя',
+            'id': 'Id',
+            'last_name': 'Фамилия',
+            'age': 'Возраст',
+            'profession': 'Профессия',
+        }
+        update_dict = {}
+        for k, v in users_map.items():
+            if request.POST.get(v, ''):
+                update_dict[k] = request.POST.get(v)
+
+        if update_dict:
+            Users.objects.filter(id=user_id).update(**update_dict)
+        return redirect('main')
+
+
         if request.POST['Имя']:
             print(request.POST['Имя'])
             user_up = Users.objects.filter(id=user_id).update(first_name=request.POST['Имя'])

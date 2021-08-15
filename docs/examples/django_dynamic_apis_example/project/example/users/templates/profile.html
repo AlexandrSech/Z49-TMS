@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Profile PAGE{% endblock %}
+
+{% block head %}{% endblock %}
+
+{% block content %}
+
+{% load static %}
+
+<a href="{% url 'users_list' %}">users_list</a>
+
+    {% for index in profile %}
+    <p>user_id: {{ index.user_id }}</p>
+    <p>first_name: {{ index.first_name }}</p>
+    <p>last_name: {{ index.last_name }}</p>
+    <p>email: {{ index.email }}</p>
+    <p>age: {{ index.age }}</p>
+    {% endfor %}
+
+<form>
+    <input type="search">
+    <input type="submit">
+</form>
+
+{% endblock %}

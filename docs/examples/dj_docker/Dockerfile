@@ -1,5 +1,6 @@
 # This is a comment
 FROM ubuntu:14.04
+
 WORKDIR /Users/johnray/Desktop/repos/repo1/Z49-TMS/docs/examples/dj_docker/
 COPY *.py ./
 COPY . .

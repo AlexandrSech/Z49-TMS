@@ -1,0 +1,25 @@
+body {
+    background-color: #696161;
+  }
+  
+  #main-navigation {
+    background-color: #787386;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  }
+  
+  #login-form {
+    margin: 8rem auto 3rem auto;
+    padding: 2rem;
+    width: 90%;
+    max-width: 90rem;
+    border-radius: 16px;
+    background-color: #878688;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    height: 22rem;
+  }
+
+  h1 {
+  color: white;
+  text-align: center;
+}
